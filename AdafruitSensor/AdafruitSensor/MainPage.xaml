@@ -1,0 +1,61 @@
+﻿<Page
+    x:Class="AdafruitSensor.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AdafruitSensor"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:Name="Layout_Grid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="9,0,-9,0">
+        <TextBlock x:Name="Title" Height="40" Margin="796,36,820,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF500E81" FontSize="26.667" FontWeight="Bold">
+        	<Run Text="Sensor Monitor"/>
+        </TextBlock>
+        <TextBlock x:Name="Accel" Margin="315,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Foreground="#FFF30C0C" Width="220" Height="33" HorizontalAlignment="Left">
+        	<Run Text="Accelerometer (m/s^2)"/>
+        </TextBlock>
+        <TextBlock x:Name="Gyro" Margin="313,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Foreground="#FFF30C0C" Width="192" Height="33" HorizontalAlignment="Left" d:LayoutOverrides="Width">
+        	<Run Text="Gyroscope (rad/s)"/>
+        </TextBlock>
+        <TextBlock x:Name="Mag" Margin="317,316,0,0" TextWrapping="Wrap" FontSize="20" FontWeight="Bold" Foreground="#FFF30C0C" HorizontalAlignment="Left" Height="33" VerticalAlignment="Top" Width="192">
+        	<Run Text="Magnetometer (uT)"/>
+        </TextBlock>
+        <TextBlock x:Name="Accel_X" Margin="325,139,0,0" TextWrapping="Wrap" Text="X:" VerticalAlignment="Top" FontSize="20" HorizontalAlignment="Left" Width="30" Height="30"/>
+        <TextBlock x:Name="Accel_Y" Margin="326,160,0,0" TextWrapping="Wrap" Text="Y:" VerticalAlignment="Top" FontSize="20" HorizontalAlignment="Left" Width="30" Height="30"/>
+        <TextBlock x:Name="Accel_Z" Margin="327,182,0,0" TextWrapping="Wrap" Text="Z:" VerticalAlignment="Top" FontSize="20" HorizontalAlignment="Left" Width="30" Height="30"/>
+        <TextBlock x:Name="Gyro_X" Margin="327,238,0,0" TextWrapping="Wrap" Text="X:" VerticalAlignment="Top" FontSize="20" HorizontalAlignment="Left" Width="30" Height="30"/>
+        <TextBlock x:Name="Gyro_Y" Margin="327,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" HorizontalAlignment="Left" Width="30" Height="30" RenderTransformOrigin="-5.733,3.467">
+        	<Run Text="Y:"/>
+        </TextBlock>
+        <TextBlock x:Name="Gyro_Z" Margin="328,286,0,0" TextWrapping="Wrap" Text="Z:" VerticalAlignment="Top" FontSize="20" HorizontalAlignment="Left" Width="30" Height="30"/>
+        <TextBlock x:Name="Mag_X" Margin="329,337,0,0" TextWrapping="Wrap" Text="X:" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Left" Width="30" Height="30" d:LayoutOverrides="VerticalAlignment"/>
+        <TextBlock x:Name="Mag_Y" Margin="330,0,0,686" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="30" Height="30">
+        	<Run Text="Y:"/>
+        </TextBlock>
+        <TextBlock x:Name="Mag_Z" Margin="330,0,0,656" TextWrapping="Wrap" FontSize="20" HorizontalAlignment="Left" Width="27" Height="30" VerticalAlignment="Bottom">
+        	<Run Text="Z:"/>
+        </TextBlock>
+        <TextBlock x:Name="Press" Margin="319,452,0,0" TextWrapping="Wrap" FontSize="20" FontWeight="Bold" Foreground="#FFF30C0C" Width="192" HorizontalAlignment="Left" d:LayoutOverrides="Width" Height="33" VerticalAlignment="Top">
+        	<Run Text="Pressure (hPa)"/>
+        </TextBlock>
+        <TextBlock x:Name="Temp" Margin="316,492,0,0" TextWrapping="Wrap" FontSize="20" FontWeight="Bold" Foreground="#FFF30C0C" Width="192" HorizontalAlignment="Left" d:LayoutOverrides="Width" Text="Temperature (C) " Height="33" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Altit" Margin="319,536,0,511" TextWrapping="Wrap" FontSize="20" FontWeight="Bold" Foreground="#FFF30C0C" Text="Altitude (m) " Width="192" HorizontalAlignment="Left" d:LayoutOverrides="Width, TopPosition, BottomPosition"/>
+        <TextBlock x:Name="Date_Time" Margin="324,0,0,473" TextWrapping="Wrap" FontSize="20" FontWeight="Bold" Foreground="#FFF30C0C" VerticalAlignment="Bottom" Text="Date &amp; Time " Width="192" Height="33" HorizontalAlignment="Left" d:LayoutOverrides="Width"/>
+        <TextBlock x:Name="AccelXaxis" Margin="361,139,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="20" HorizontalAlignment="Left" Width="192" Height="30"/>
+        <TextBlock x:Name="AccelYaxis" Margin="361,161,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="20" Height="30" HorizontalAlignment="Left" Width="192"/>
+        <TextBlock x:Name="AccelZaxis" Margin="361,182,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="20" Height="30" Width="192" HorizontalAlignment="Left" d:LayoutOverrides="Width"/>
+        <TextBlock x:Name="GyroXaxis" Margin="361,238,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="20" Height="30" Width="192" HorizontalAlignment="Left" d:LayoutOverrides="Width"/>
+        <TextBlock x:Name="GyroYaxis" Margin="361,261,1367,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="20" Height="30" Width="192"/>
+        <TextBlock x:Name="GyroZaxis" Margin="361,284,0,0" TextWrapping="Wrap" Text="" FontSize="20" Height="30" VerticalAlignment="Top" Width="192" HorizontalAlignment="Left" d:LayoutOverrides="Width"/>
+        <TextBlock x:Name="MagXaxis" Margin="361,337,0,0" TextWrapping="Wrap" Text="" FontSize="20" Height="30" VerticalAlignment="Top" Width="192" HorizontalAlignment="Left" d:LayoutOverrides="Width"/>
+        <TextBlock x:Name="MagYaxis" Margin="361,363,0,0" TextWrapping="Wrap" Text="" FontSize="20" VerticalAlignment="Top" Height="30" HorizontalAlignment="Left" Width="192"/>
+        <TextBlock x:Name="MagZaxis" Margin="361,393,0,0" TextWrapping="Wrap" Text="" FontSize="20" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="192"/>
+        <TextBlock x:Name="Pressure" Margin="0,452,1206,0" TextWrapping="Wrap" Text="" FontSize="20" HorizontalAlignment="Right" Width="192" Height="30" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Temperature" Margin="520,494,0,0" TextWrapping="Wrap" Text="" FontSize="20" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="192"/>
+        <TextBlock x:Name="Altitude" Margin="520,537,0,513" TextWrapping="Wrap" Text="" FontSize="20" HorizontalAlignment="Left" Width="192" d:LayoutOverrides="TopPosition, BottomPosition"/>
+        <TextBlock x:Name="DateTime" Margin="520,0,0,475" TextWrapping="Wrap" Text="" FontSize="20" VerticalAlignment="Bottom" Height="30" HorizontalAlignment="Left" Width="192"/>
+        <Button x:Name="Start" Content="Start" HorizontalAlignment="Stretch" Margin="514,0,1214,264" VerticalAlignment="Bottom" Background="#FF37AA37" Height="40" FontSize="20" Click="Start_Click"/>
+        <Button x:Name="Exit" Content="Exit" HorizontalAlignment="Stretch" Margin="1070,0,658,264" VerticalAlignment="Bottom" Background="#FF37AA37" Height="40" FontSize="20" Click="Exit_Click"/>
+
+    </Grid>
+</Page>
